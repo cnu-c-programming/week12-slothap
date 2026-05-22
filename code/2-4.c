@@ -6,8 +6,16 @@ int main(int argc, const char* argv[]) {
 
     FILE* fp = fopen(argv[1], "r");
 
+    int alphabet[26] = {0};
+    int c;
 
-
+    while ((c = fgetc(fp)) != EOF){
+        if(c >= 'a' && c <= 'z')    alphabet[c - 'a']++;
+    }
     fclose(fp);
+
+    for (int i = 0; i <26; i++){
+        printf("%c:%d\n", 'a' + i, alphabet[i]);
+    }
 }
 
