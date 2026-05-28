@@ -15,7 +15,7 @@ int main(int argc, const char* argv[]) {
     fclose(fp);
 
     for (int i = 0; i <26; i++){
-        printf("%c:%d\n", 'a' + i, alphabet[i]);
+        printf("%c: %d\n", 'a' + i, alphabet[i]);
     }
 }
 
